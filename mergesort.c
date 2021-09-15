@@ -42,6 +42,10 @@ int main(int argc, char **argv) {
         //Sort the array using mergeSort
         mergeSort(randArray, size); 
         
+        //Print final state of array after sort 
+        printArray(randArray, size);
+        printf("\n");
+        
         //Free the main array in memory before exiting the program. 
         free(randArray);
         
@@ -83,10 +87,6 @@ void mergeSort(int *array, int length) {
 
     //Call recusive mergesort function 
     mergeSortR(array, auxArray, 0, length);
-    
-    //Print final state of array after sort 
-    printArray(array, length);
-    printf("\n");
 
     //Free the memory allocated to the temp array 
     free(auxArray);
